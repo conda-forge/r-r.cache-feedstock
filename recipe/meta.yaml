@@ -26,14 +26,14 @@ requirements:
     - r-base
     - r-r.methodss3 >=1.7.0
     - r-r.oo >=1.19.0
-    - r-r.utils >=2.1.0
+    - r-r.utils >=2.6.0
     - r-digest >=0.6.8
 
   run:
     - r-base
     - r-r.methodss3 >=1.7.0
     - r-r.oo >=1.19.0
-    - r-r.utils >=2.1.0
+    - r-r.utils >=2.6.0
     - r-digest >=0.6.8
 
 test:
