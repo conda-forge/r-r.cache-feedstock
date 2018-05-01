@@ -1,4 +1,4 @@
-{% set version = '0.12.0' %}
+{% set version = "0.13.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/R.cache_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/R.cache/R.cache_{{ version }}.tar.gz
-  sha256: dd47c4690fcae910bf5d71455f2eb25b908ffe02d757fc60e1f0a29cb828dd00
+  sha256: d3d4a99a676734ea53e96747d87857fa69615e59858804e92f8ad9ddcf62c5c1
 
 build:
   number: 0
@@ -26,14 +26,14 @@ requirements:
     - r-base
     - r-r.methodss3 >=1.7.0
     - r-r.oo >=1.19.0
-    - r-r.utils >=2.1.0
+    - r-r.utils >=2.6.0
     - r-digest >=0.6.8
 
   run:
     - r-base
     - r-r.methodss3 >=1.7.0
     - r-r.oo >=1.19.0
-    - r-r.utils >=2.1.0
+    - r-r.utils >=2.6.0
     - r-digest >=0.6.8
 
 test:
