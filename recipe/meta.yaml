@@ -27,14 +27,14 @@ requirements:
   host:
     - r-base
     - r-r.methodss3 >=1.7.1
-    - r-r.oo >=1.21.0
-    - r-r.utils >=2.6.0
+    - r-r.oo >=1.23.0
+    - r-r.utils >=2.8.0
     - r-digest >=0.6.13
   run:
     - r-base
     - r-r.methodss3 >=1.7.1
-    - r-r.oo >=1.21.0
-    - r-r.utils >=2.6.0
+    - r-r.oo >=1.23.0
+    - r-r.utils >=2.8.0
     - r-digest >=0.6.13
 
 test:
@@ -53,13 +53,9 @@ about:
     key-value storage where the key can be an arbitrary set of R objects.  The cache
     memory is persistent (on the file system).
   license_family: LGPL
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
