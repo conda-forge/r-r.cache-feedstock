@@ -1,4 +1,4 @@
-{% set version = '0.13.0' %}
+{% set version = "0.14.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/R.cache_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/R.cache/R.cache_{{ version }}.tar.gz
-  sha256: d3d4a99a676734ea53e96747d87857fa69615e59858804e92f8ad9ddcf62c5c1
+  sha256: 18af4e372440b9f28b4b71346c8ed9de220232f9903730ccee2bfb3c612c16d9
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1002
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -27,14 +27,14 @@ requirements:
   host:
     - r-base
     - r-r.methodss3 >=1.7.1
-    - r-r.oo >=1.21.0
-    - r-r.utils >=2.6.0
+    - r-r.oo >=1.23.0
+    - r-r.utils >=2.8.0
     - r-digest >=0.6.13
   run:
     - r-base
     - r-r.methodss3 >=1.7.1
-    - r-r.oo >=1.21.0
-    - r-r.utils >=2.6.0
+    - r-r.oo >=1.23.0
+    - r-r.utils >=2.8.0
     - r-digest >=0.6.13
 
 test:
@@ -53,13 +53,9 @@ about:
     key-value storage where the key can be an arbitrary set of R objects.  The cache
     memory is persistent (on the file system).
   license_family: LGPL
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2.1'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
