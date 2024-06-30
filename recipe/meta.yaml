@@ -1,6 +1,5 @@
 {% set version = "0.16.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-r.cache
@@ -13,8 +12,7 @@ source:
   sha256: 7853409161571a790e0383f64f99e4eae43201a0ed7146d2baf157741a509291
 
 build:
-  merge_build_host: true  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
